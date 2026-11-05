@@ -90,6 +90,8 @@ td.num,th.num{text-align:right}
 /* Calculator */
 .calc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
 @media (max-width:760px){.calc{grid-template-columns:1fr}}
+.calc>*,.calc .field{min-width:0}
+select{width:100%}
 .field{display:grid;gap:8px}
 .field>span{font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.04em}
 .seg{display:flex;flex-wrap:wrap;gap:6px}
@@ -106,7 +108,7 @@ input[type=range]{width:100%;accent-color:var(--gold)}
 .result .msg.warn{color:var(--band-gold)}
 
 /* Examples */
-.ex{display:grid;gap:10px}
+.open{background:var(--warn-soft);color:var(--fg);border:1px solid var(--warn);border-radius:10px;padding:12px 14px;display:grid;gap:6px;font-size:.92rem}\n.open b{color:var(--warn);font-weight:600}\n\1
 .ex-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .ex-row .who{font-weight:600} .ex-row .how{font-size:.88rem;color:var(--muted)}
 .ex-row .price{font-family:var(--f-num);font-size:1.1rem;text-align:right}
@@ -130,9 +132,9 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 
 <div class="band">
   <div class="wrap hero">
-    <p class="eyebrow">«Метод Вайлер» · 11-й поток · черновик на утверждение · 30.10.2026</p>
+    <p class="eyebrow">«Метод Вайлер» · 11-й поток · для команды · обновлено 05.11.2026</p>
     <h1>Условия 11-го потока</h1>
-    <p class="lead">Лена, здесь вся система цен и скидок для обеих воронок — «Перепрошивки» и «Формулы любви» — на одной странице. Зелёным отмечено то, что мы уже решили 29.10, жёлтым — моё предложение, фиолетовым — то, что решаешь ты.</p>
+    <p class="lead">Цены, скидки и подарки для обеих воронок — «Перепрошивки» и «Формулы любви» — на одной странице. По этим правилам работают отдел продаж, бот, лендинги и презентации.</p>
     <p class="rule">Цена окна минус одна скидка и минус монеты. Монеты складываются с любой скидкой.</p>
     <div class="formula" aria-label="Как считается цена">
       <div class="f-step"><i>шаг 1</i><b>Тариф</b><span>Стандарт, Про или ВИП</span></div>
@@ -149,8 +151,8 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 <main>
 <section class="wrap stack" aria-labelledby="s1">
   <p class="eyebrow">Шаг 1 и 2 · окно решает цену</p>
-  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><h2 id="s1">Лесенка цен</h2><span class="chip c-ok">Решено 29.10</span></div>
-  <p class="lead">Окна считаются от открытия продаж после третьего эфира — так решено для «Перепрошивки». Для «Формулы любви» предлагаю то же правило вместо «до Д+2, 23:59».</p>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><h2 id="s1">Лесенка цен</h2><span class="chip c-ok">Действует</span></div>
+  <p class="lead">Окна считаются от открытия продаж после третьего эфира — одинаково в «Перепрошивке» и «Формуле любви».</p>
   <div class="tbl-wrap">
     <table>
       <thead><tr><th>Тариф</th><th class="num hl">Первые 72 часа</th><th class="num">До конца 7-го дня</th><th class="num">Потом, цена сайта</th><th class="num">Рассрочка от, в месяц</th></tr></thead>
@@ -170,7 +172,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
   <div class="cards">
 
     <article class="card">
-      <div class="card-head"><h3>Золотые монеты</h3><span class="chip c-prop">Складываются · правка 2.11</span></div>
+      <div class="card-head"><h3>Золотые монеты</h3><span class="chip c-ok">Действует</span></div>
       <p class="big">до 5 600 ₽</p>
       <dl class="kv">
         <dt>Кому</dt><dd>всем, кто играл: в «Перепрошивке» и в «Формуле любви» одинаково</dd>
@@ -178,38 +180,38 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
         <dt>С чем</dt><dd>с любой скидкой и любым тарифом; нижняя граница считается до монет</dd>
         <dt>Срок</dt><dd>7 дней от открытия продаж, по цене сайта не действуют</dd>
       </dl>
-      <p class="note">Если бы монеты сгорали, когда человек берёт другую скидку, ключи теряли бы смысл: «копила, а не пригодилось». Сумма небольшая — по словам Арины, чаще 2–3 тыс. ₽, это 1–2% цены Про. В «Формуле любви» те же монеты вместо прежних 5 / 10 / 15%.</p>
+      <p class="note">Монеты — награда за игру, поэтому не сгорают, если человек берёт другую скидку. В «Формуле любви» те же монеты; скидок 5 / 10 / 15% за ступени Восьмой клетки нет.</p>
     </article>
 
     <article class="card">
-      <div class="card-head"><h3>Цена для выпускниц<span class="hint"><button type="button" aria-label="Почему фиксированная цена">?</button><span class="pop" role="tooltip">30% от цены «до 7-го дня» — решено 30.10. Человеку показываем готовую цифру, без процентов.</span></span></h3><span class="chip c-ok">30% решено</span></div>
+      <div class="card-head"><h3>Цена для выпускниц<span class="hint"><button type="button" aria-label="Почему фиксированная цена">?</button><span class="pop" role="tooltip">30% от цены «до 7-го дня». Человеку называем готовую цифру, без процентов.</span></span></h3><span class="chip c-ok">Действует</span></div>
       <p class="big">−30% · готовая цена</p>
       <div class="opt" aria-label="Цены для выпускниц">
         <div><span>Стандарт</span><span class="num">76 999 ₽</span></div>
         <div><span>Про</span><span class="num">132 999 ₽</span></div>
         <div><span>ВИП</span><span class="num">244 999 ₽</span></div>
       </div>
-      <p class="note">Одна цена в любое окно: выпускницы и так знают продукт. Эти же цифры — нижняя граница для всех скидок, кроме второго участника.</p>
+      <p class="note">Одна цена в любое окно: выпускницы и так знают продукт. Эти же цифры — нижняя граница цены. Исключения — второй участник и скидка до 50%, согласованная Леной.</p>
     </article>
 
     <article class="card">
-      <div class="card-head"><h3>Второй участник</h3><span class="chip c-ok">50% решено</span></div>
+      <div class="card-head"><h3>Второй участник</h3><span class="chip c-ok">Действует</span></div>
       <p class="big">−50%</p>
       <div class="opt" aria-label="Варианты для второго участника">
         <div><span>Стандарт: половина от 129 999 ₽</span><span class="num">≈ 65 000 ₽</span></div>
-        <div><span>Про: половина от 229 999 ₽</span><span class="num">≈ 115 000 ₽</span></div>
+        \1\n        <div><span>ВИП</span><span class="num">без скидки</span></div>
       </div>
-      <p class="note">50% от самой высокой цены, цены сайта — решено 30.10, уже внесено на сайт. Цена одна в любое окно. Она ниже цены для выпускниц, поэтому второй участник — единственное исключение из нижней границы. Точное округление (64 999,5 и 114 999,5 ₽) — как на сайте. На ВИП скидку для второго участника предлагаю не давать: там 8 мест и личное время Лены. В презентации дня 3 пока стоит 52% — исправляем.</p>
+      <p class="note">50% от цены сайта, одна цена в любое окно. Точная сумма — 64 999,5 и 114 999,5 ₽, округляем как на сайте. На ВИП скидки для второго участника нет: там 8 мест.</p>
     </article>
 
     <article class="card">
-      <div class="card-head"><h3>Зачёт «Кода сознания»</h3><span class="chip c-prop">Дожим · правка 2.11</span></div>
+      <div class="card-head"><h3>Зачёт «Кода сознания»</h3><span class="chip c-prop">Дожим</span></div>
       <p class="big">минус оплаченное за КС</p>
       <dl class="kv">
         <dt>Кому</dt><dd>не всем подряд: наставник даёт как дожим покупателю «Кода сознания», который сомневается</dd>
         <dt>Сколько</dt><dd>ровно сумма, которую человек заплатил: 9 999 или 19 999 ₽</dd>
         <dt>Пример</dt><dd>Про в первые 72 часа: 179 999 − 19 999 = <span class="num">160 000 ₽</span></dd>
-        <dt>Срок</dt><dd>предложение: 7 дней после последнего занятия КС, а не после покупки — курс идёт 10 дней</dd>
+        <dt>Срок</dt><dd>7 дней после последнего занятия КС, а не после покупки: курс идёт 10 дней</dd>
       </dl>
     </article>
   </div>
@@ -217,13 +219,13 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 
 <section class="wrap stack" aria-labelledby="s2b">
   <p class="eyebrow">Дожим</p>
-  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><h2 id="s2b">Что наставник может дать от себя</h2><span class="chip c-prop">Предложение · лимиты утверждает Лена</span></div>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><h2 id="s2b">Что наставник может дать от себя</h2><span class="chip c-ok">Действует</span></div>
   <p class="lead">Дожим — не скидка для всех, а инструмент для человека, который почти решил. Сначала то, что не снижает цену, потом деньги.</p>
   <div class="tbl-wrap">
     <table>
       <thead><tr><th>Инструмент</th><th>Кто решает</th><th>Правило</th></tr></thead>
       <tbody>
-        <tr><td>Подарки 72 часов после окна</td><td>наставник сам</td><td>исключительный случай: тот же набор, что за 72 часа</td></tr>
+        <tr><td>Подарки 72 часов после окна</td><td>наставник сам</td><td>исключительный случай: подарки тарифа, как за 72 часа; браслет — только если он ещё остался в лимите 20</td></tr>
         <tr><td>Зачёт «Кода сознания»</td><td>наставник сам</td><td>минус то, что человек заплатил за КС: 9 999 или 19 999 ₽</td></tr>
         <tr><td>Скидка 5%</td><td>наставник сам</td><td>Про в первые 72 часа: <span class="num">170 999 ₽</span></td></tr>
         <tr><td>Скидка 10–15%</td><td>с согласия РОПа</td><td>Про в первые 72 часа: <span class="num">161 999 – 152 999 ₽</span></td></tr>
@@ -236,7 +238,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
       <li>Скидка дожима заменяет другие скидки, а не складывается с ними. Монеты и подарки идут сверху.</li>
       <li>Цена не ниже цены для выпускниц. Исключения — второй участник и скидка до 50%, которую согласовала Лена.</li>
       <li>Каждый дожим — в amoCRM: что дали и почему.</li>
-      <li>Раз в неделю Арина показывает, в скольких сделках был дожим и какой средний размер скидки.</li>
+      <li>Раз в неделю РОП показывает, в скольких сделках был дожим и какой средний размер скидки.</li>
     </ul></div>
     <div class="card"><h3>Почему с лимитами</h3><ul class="clean">
       <li>Скидка 15% требует на 17,6% больше продаж, чтобы выручка осталась прежней. Скидка 50% — вдвое больше продаж.</li>
@@ -260,10 +262,10 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
           <option value="famA">Второй участник: −50% от цены сайта</option>
           <option value="ks1">Дожим: зачёт «Кода сознания» 9 999 ₽</option>
           <option value="ks2">Дожим: зачёт «Кода сознания» 19 999 ₽</option>
-          <option value="m5">Дожим: скидка наставника 5% (предложение)</option>
-          <option value="m10">Дожим: скидка 10% с РОПом (предложение)</option>
-          <option value="m15">Дожим: скидка 15% с РОПом (предложение)</option>
-          <option value="m50">Дожим: скидка 50%, только с Леной (предложение)</option>
+          <option value="m5">Дожим: скидка наставника 5%</option>
+          <option value="m10">Дожим: скидка 10% с РОПом</option>
+          <option value="m15">Дожим: скидка 15% с РОПом</option>
+          <option value="m50">Дожим: скидка 50%, только с согласия Лены</option>
         </select>
       </div>
       <div class="field" id="keysField"><label for="keys"><span style="font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.04em">Ключей у человека: <span class="num" id="keysOut">12</span></span></label>
@@ -285,7 +287,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
   <h2 id="s4">Пять примеров</h2>
   <div class="ex">
     <div class="ex-row"><div><p class="who">После «Перепрошивки», 22 ключа</p><p class="how">Про в первые 72 часа · монеты 4 400 ₽</p></div><span class="was"></span><span class="price">175 599 ₽</span></div>
-    <div class="ex-row"><div><p class="who">После «Формулы любви», 26 ключей</p><p class="how">ВИП в первые 72 часа · монеты 5 200 ₽ · по черновику «Формулы» было −15%</p></div><span class="was">280 499 ₽</span><span class="price">324 799 ₽</span></div>
+    <div class="ex-row"><div><p class="who">После «Формулы любви», 26 ключей</p><p class="how">ВИП в первые 72 часа · монеты 5 200 ₽</p></div><span class="was"></span><span class="price">324 799 ₽</span></div>
     <div class="ex-row"><div><p class="who">Выпускница, у неё 28 ключей</p><p class="how">Про в первые 7 дней · цена выпускницы 132 999 ₽ и монеты 5 600 ₽</p></div><span class="was"></span><span class="price">127 399 ₽</span></div>
     <div class="ex-row"><div><p class="who">Покупала «Код сознания» за 19 999 ₽, у неё 12 ключей</p><p class="how">Про в первые 72 часа · наставник даёт зачёт КС как дожим, монеты 2 400 ₽ сверху</p></div><span class="was"></span><span class="price">157 600 ₽</span></div>
     <div class="ex-row"><div><p class="who">Пришла с мужем, оба на Про</p><p class="how">Первая по своей цене, второй участник — половина цены сайта</p></div><span class="was"></span><span class="price">≈ 115 000 ₽</span></div>
@@ -296,25 +298,26 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
   <div class="stack">
     <p class="eyebrow">Это не скидки</p>
     <h2 id="s5">Подарки, бронь и рассрочка</h2>
-    <p class="lead">Подарки не уменьшают цену и идут к любой скидке. Всем — за решение в первые 72 часа, выдаются после полной оплаты. После 72 часов — только как дожим, по решению наставника.</p>
+    <p class="lead">Подарки — за решение в первые 72 часа после открытия продаж. Они не уменьшают цену и идут к любой скидке. После 72 часов — только как дожим, по решению наставника.</p>
   </div>
   <div class="two" style="margin-top:18px">
     <div class="card">
-      <div class="card-head"><h3>Подарки за 72 часа</h3><span class="chip c-q">Правки 2.11 — утвердить</span></div>
+      <div class="card-head"><h3>Подарки за 72 часа</h3><span class="chip c-ok">Действует с 05.11</span></div>
       <dl class="kv">
-        <dt>Стандарт</dt><dd>браслет по дате рождения</dd>
-        <dt>Про</dt><dd>браслет, персональный календарь, печатный дневник<span class="hint"><button type="button" aria-label="Про печатный дневник">?</button><span class="pop" role="tooltip">26.10 решили, что печатных дневников не будет. Оставляем в подарках, только если Лена пересматривает это решение и Зарина подтвердит стоимость с доставкой, в том числе за границу.</span></span> и третий подарок — вместо «разбора с наставником»<span class="hint"><button type="button" aria-label="Почему убираем разбор с наставником">?</button><span class="pop" role="tooltip">Разбор с наставником человек и так получает на диагностике в отделе продаж, как подарок он ничего не добавляет (Арина, 2.11). Варианты на замену — в вопросах ниже.</span></span></dd>
-        <dt>ВИП</dt><dd>всё из Про и личный видео-разбор от Лены</dd>
+        <dt>Стандарт</dt><dd>предобучение</dd>
+        <dt>Про</dt><dd>предобучение, браслет по дате рождения, персональный календарь</dd>
+        <dt>ВИП</dt><dd>предобучение, браслет по дате рождения, персональный календарь, печатный дневник</dd>
       </dl>
-      <p class="note">Браслет — всем, кто оплатил или внёс бронь в первые 72 часа, без «первым 20». Эфиры потом крутятся в записи, и обещание «первым 20» в записи нельзя выполнить честно: человек звонит, а подарков уже нет (Арина, 2.11). Сколько стоит браслет с доставкой — уточняем у Зарины.</p>
+      <p class="note">Предобучение открывается сразу после оплаты или предоплаты. Остальные подарки — после полной оплаты. Браслет — первым 20, только в Про и ВИП.</p>
+      <div class="open" role="note"><b>Не определено: как считать «первых 20»</b><span>На поток, на живой запуск или на каждую группу автовебинара? Эфиры потом идут в записи, и обещание «первым 20» звучит в каждой. Пока правила нет, наставник не может сказать человеку, достался ли ему браслет.</span></div>
     </div>
     <div class="card">
       <h3>Бронь, рассрочка, предобучение</h3>
       <ul class="clean">
-        <li><b>Бронь 5 000 ₽</b> или заявка на рассрочку в первые 72 часа сохраняют цену окна и подарки.</li>
+        <li><b>Бронь 5 000 ₽</b> или заявка на рассрочку в первые 72 часа сохраняют цену окна, место и подарки.</li>
         <li><b>Рассрочка</b> на 3, 6, 12 или 18 месяцев, первый платёж через месяц.</li>
-        <li><b>Предобучение</b> — первый модуль, открывается всем сразу после оплаты или предоплаты.</li>
-        <li><b>«Формула любви»</b>: вместо скидок 5 / 10 / 15% за ступени Восьмой клетки — те же монеты. Подарки ступеней в черновике воронки ещё не утверждены, их решаем отдельно, к запуску «Формулы».</li>
+        <li><b>Предобучение</b> — первый модуль. Подарок за решение в первые 72 часа, открывается сразу после оплаты или предоплаты.</li>
+        <li><b>«Формула любви»</b>: подарки ступеней Восьмой клетки определим к запуску «Формулы».</li>
       </ul>
     </div>
   </div>
@@ -322,21 +325,17 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 
 <section class="band" aria-labelledby="s6">
   <div class="wrap stack" style="padding-block:40px">
-    <p class="eyebrow">Осталось решить</p>
-    <h2 id="s6" style="color:var(--band-fg)">Пять вопросов, и условия готовы</h2>
+    <p class="eyebrow">Пока не определено</p>
+    <h2 id="s6" style="color:var(--band-fg)">Один вопрос открыт</h2>
     <div class="decide">
-      <div class="dq"><h3>1. Кто какую скидку даёт: наставник сам — до 5%, с согласия Арины — до 15%, только Лена — до 50%?</h3><div class="ans"><span class="rec">Да</span><span>Наставник сам до 15%</span><span>Другие лимиты</span></div></div>
-      <div class="dq"><h3>2. Браслет всем, кто решил в первые 72 часа, без «первым 20»?</h3><div class="ans"><span class="rec">Да, если стоимость браслета с доставкой это позволяет</span><span>Оставить «первым 20»</span></div></div>
-      <div class="dq"><h3>3. Чем заменить «разбор с наставником» в подарках Про?</h3><div class="ans"><span class="rec">Групповой разбор с Леной раз в поток</span><span>Разбор совместимости пары</span><span>Убрать без замены</span></div></div>
-      <div class="dq"><h3>4. Зачёт «Кода сознания» — 7 дней после последнего занятия КС?</h3><div class="ans"><span class="rec">Да, если отдел продаж подтвердит по данным</span><span>Другой срок</span></div></div>
-      <div class="dq"><h3>5. Монеты складываются с любой скидкой, нижняя граница считается до монет?</h3><div class="ans"><span class="rec">Да</span><span>Нет, монеты или скидка</span></div></div>
+      <div class="dq"><h3>Как считать «первых 20» для браслета?</h3><div class="ans"><span>На поток</span><span>На живой запуск</span><span>На каждую группу автовебинара</span></div></div>
     </div>
-    <p class="lead">После ответов передам условия Ире и Арине: Ира — в презентации, лендинг и бот, Арина — в работу отдела продаж. Процент наставникам считаем от фактически оплаченной цены.</p>
+    <p class="lead">Всё остальное на этой странице действует. Процент наставника считаем от фактически оплаченной цены.</p>
   </div>
 </section>
 </main>
 
-<footer class="wrap">Источники: цены и окна — решение 29.10; дожим, браслет, подарки и монеты сверху скидки — замечания Арины 2.11; подарки — презентация третьего дня «Перепрошивки», слайды 70–71; скидка выпускницам 30% — с 26.10; монеты — «Перепрошивка», дни 1–3. Все суммы в рублях.</footer>
+<footer class="wrap">Обновлено 05.11.2026. Цены и окна — с 29.10, подарки — с 05.11. Все суммы в рублях.</footer>
 
 <script>
 (function(){
@@ -361,10 +360,10 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
     document.getElementById("keysOut").textContent=k;
     var base=P[st.t][st.w], g=G[st.t], total=base, label="Скидка", msg="", warn=false, free=false;
     if(d==="grad"){label="Цена выпускницы"; total=g; free=true; msg="Готовая цена в любое окно: от цены «до 7-го дня» минус 30%.";}
-    else if(d==="famA"){label="Второй участник, −50%"; if(st.t==="ВИП"){msg="На ВИП скидку для второго участника предлагаю не давать: 8 мест.";}else{total=Math.round(P[st.t][2]*0.5); free=true; msg="Половина цены сайта, одна цена в любое окно.";}}
-    else if(d==="ks1"||d==="ks2"){label="Зачёт «Кода сознания»"; total=base-(d==="ks1"?9999:19999); msg="Дожим по решению наставника. Срок — предложение: 7 дней после последнего занятия КС.";}
+    else if(d==="famA"){label="Второй участник, −50%"; if(st.t==="ВИП"){msg="На ВИП скидки для второго участника нет: 8 мест.";}else{total=Math.round(P[st.t][2]*0.5); free=true; msg="Половина цены сайта, одна цена в любое окно.";}}
+    else if(d==="ks1"||d==="ks2"){label="Зачёт «Кода сознания»"; total=base-(d==="ks1"?9999:19999); msg="Дожим по решению наставника. Срок — 7 дней после последнего занятия КС.";}
     else if(d==="m50"){label="Скидка 50%, согласовала Лена"; total=Math.round(base*0.5); free=true; msg="Исключительный случай, только с согласия Лены.";}
-    else if(d==="m5"||d==="m10"||d==="m15"){var pc=+d.slice(1); label="Скидка наставника, "+pc+"%"; total=Math.round(base*(1-pc/100)); msg=(pc===5?"Наставник даёт сам":"Только с согласия РОПа")+", причина — в amoCRM. Лимиты — предложение.";}
+    else if(d==="m5"||d==="m10"||d==="m15"){var pc=+d.slice(1); label="Скидка наставника, "+pc+"%"; total=Math.round(base*(1-pc/100)); msg=(pc===5?"Наставник даёт сам":"Только с согласия РОПа")+", причина — в amoCRM.";}
     if(!free&&d!=="none"&&total<g){warn=true; msg="Ниже нижней границы: цена выпускницы на этом тарифе — "+fmt(g)+". Так не продаём.";}
     var coins=st.w<2?k*200:0;
     if(st.w===2&&k>0) msg=(msg?msg+" ":"")+"Монеты действуют первые 7 дней, по цене сайта — нет.";
