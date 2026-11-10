@@ -108,7 +108,9 @@ input[type=range]{width:100%;accent-color:var(--gold)}
 .result .msg.warn{color:var(--band-gold)}
 
 /* Examples */
-.open{background:var(--warn-soft);color:var(--fg);border:1px solid var(--warn);border-radius:10px;padding:12px 14px;display:grid;gap:6px;font-size:.92rem}\n.open b{color:var(--warn);font-weight:600}\n\1
+.open{background:var(--warn-soft);color:var(--fg);border:1px solid var(--warn);border-radius:10px;padding:12px 14px;display:grid;gap:6px;font-size:.92rem}
+.open b{color:var(--warn);font-weight:600}
+.ex{display:grid;gap:10px}
 .ex-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .ex-row .who{font-weight:600} .ex-row .how{font-size:.88rem;color:var(--muted)}
 .ex-row .price{font-family:var(--f-num);font-size:1.1rem;text-align:right}
@@ -132,7 +134,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 
 <div class="band">
   <div class="wrap hero">
-    <p class="eyebrow">«Метод Вайлер» · 11-й поток · для команды · обновлено 05.11.2026</p>
+    <p class="eyebrow">«Метод Вайлер» · 11-й поток · для команды · обновлено 10.11.2026</p>
     <h1>Условия 11-го потока</h1>
     <p class="lead">Цены, скидки и подарки для обеих воронок — «Перепрошивки» и «Формулы любви» — на одной странице. По этим правилам работают отдел продаж, бот, лендинги и презентации.</p>
     <p class="rule">Цена окна минус одна скидка и минус монеты. Монеты складываются с любой скидкой.</p>
@@ -143,7 +145,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
       <div class="f-op" aria-hidden="true">−</div>
       <div class="f-step"><i>шаг 3</i><b>Одна скидка</b><span>по правилам или дожим наставника, не дешевле цены выпускницы</span></div>
       <div class="f-op" aria-hidden="true">−</div>
-      <div class="f-step"><i>шаг 4</i><b>Монеты</b><span>200 ₽ за ключ, первые 7 дней, сверху любой скидки</span></div>
+      <div class="f-step"><i>шаг 4</i><b>Монеты</b><span>200 ₽ за ключ, до 5 000 ₽, первые 7 дней, сверху любой скидки</span></div>
     </div>
   </div>
 </div>
@@ -173,14 +175,14 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 
     <article class="card">
       <div class="card-head"><h3>Золотые монеты</h3><span class="chip c-ok">Действует</span></div>
-      <p class="big">до 5 600 ₽</p>
+      <p class="big">до 5 000 ₽</p>
       <dl class="kv">
-        <dt>Кому</dt><dd>всем, кто играл: в «Перепрошивке» и в «Формуле любви» одинаково</dd>
-        <dt>Сколько</dt><dd>1 ключ = 200 ₽, максимум 28 ключей</dd>
+        <dt>Кому</dt><dd>всем, кто играл: в «Перепрошивке» и в «Формуле любви» одинаково. Ключи из разных интенсивов складываются, если срок каждой партии ещё не истёк</dd>
+        <dt>Сколько</dt><dd>1 ключ = 200 ₽; на одну покупку «Метода» — не больше 5 000 ₽ (это 25 ключей), сколько бы ключей ни было</dd>
         <dt>С чем</dt><dd>с любой скидкой и любым тарифом; нижняя граница считается до монет</dd>
-        <dt>Срок</dt><dd>7 дней от открытия продаж, по цене сайта не действуют</dd>
+        <dt>Срок</dt><dd>7 дней от открытия продаж своего интенсива, по цене сайта не действуют</dd>
       </dl>
-      <p class="note">Монеты — награда за игру, поэтому не сгорают, если человек берёт другую скидку. В «Формуле любви» те же монеты; скидок 5 / 10 / 15% за ступени Восьмой клетки нет.</p>
+      <p class="note">Монеты — награда за игру, поэтому не сгорают, если человек берёт другую скидку. В «Формуле любви» те же монеты; скидок 5 / 10 / 15% за ступени Восьмой клетки нет. Баллы активности на курсе «Метода» — не монеты: на покупку они не списываются.</p>
     </article>
 
     <article class="card">
@@ -199,9 +201,10 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
       <p class="big">−50%</p>
       <div class="opt" aria-label="Варианты для второго участника">
         <div><span>Стандарт: половина от 129 999 ₽</span><span class="num">≈ 65 000 ₽</span></div>
-        \1\n        <div><span>ВИП</span><span class="num">без скидки</span></div>
+        <div><span>Про: половина от 229 999 ₽</span><span class="num">≈ 115 000 ₽</span></div>
+        <div><span>ВИП</span><span class="num">без скидки</span></div>
       </div>
-      <p class="note">50% от цены сайта, одна цена в любое окно. Точная сумма — 64 999,5 и 114 999,5 ₽, округляем как на сайте. На ВИП скидки для второго участника нет: там 8 мест.</p>
+      <p class="note">50% от цены сайта, одна цена в любое окно. Точная сумма — 64 999,5 и 114 999,5 ₽, округляем как на сайте. Действует и тогда, когда первый участник уже оплатил. Продажи 11-го потока — до 28.11. На ВИП скидки для второго участника нет: там 8 мест.</p>
     </article>
 
     <article class="card">
@@ -268,8 +271,8 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
           <option value="m50">Дожим: скидка 50%, только с согласия Лены</option>
         </select>
       </div>
-      <div class="field" id="keysField"><label for="keys"><span style="font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.04em">Ключей у человека: <span class="num" id="keysOut">12</span></span></label>
-        <input type="range" id="keys" min="0" max="28" value="12">
+      <div class="field" id="keysField"><label for="keys"><span style="font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:.04em">Ключей у человека, из всех интенсивов: <span class="num" id="keysOut">12</span></span></label>
+        <input type="range" id="keys" min="0" max="56" value="12">
       </div>
     </div>
     <div class="result" aria-live="polite">
@@ -287,8 +290,8 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
   <h2 id="s4">Пять примеров</h2>
   <div class="ex">
     <div class="ex-row"><div><p class="who">После «Перепрошивки», 22 ключа</p><p class="how">Про в первые 72 часа · монеты 4 400 ₽</p></div><span class="was"></span><span class="price">175 599 ₽</span></div>
-    <div class="ex-row"><div><p class="who">После «Формулы любви», 26 ключей</p><p class="how">ВИП в первые 72 часа · монеты 5 200 ₽</p></div><span class="was"></span><span class="price">324 799 ₽</span></div>
-    <div class="ex-row"><div><p class="who">Выпускница, у неё 28 ключей</p><p class="how">Про в первые 7 дней · цена выпускницы 132 999 ₽ и монеты 5 600 ₽</p></div><span class="was"></span><span class="price">127 399 ₽</span></div>
+    <div class="ex-row"><div><p class="who">После «Перепрошивки» и «Формулы любви», 10 + 16 ключей</p><p class="how">ВИП в первые 72 часа · 26 ключей = 5 200 ₽, но на покупку — не больше 5 000 ₽</p></div><span class="was"></span><span class="price">324 999 ₽</span></div>
+    <div class="ex-row"><div><p class="who">Выпускница, у неё 28 ключей</p><p class="how">Про в первые 7 дней · цена выпускницы 132 999 ₽ и монеты 5 000 ₽ (потолок)</p></div><span class="was"></span><span class="price">127 999 ₽</span></div>
     <div class="ex-row"><div><p class="who">Покупала «Код сознания» за 19 999 ₽, у неё 12 ключей</p><p class="how">Про в первые 72 часа · наставник даёт зачёт КС как дожим, монеты 2 400 ₽ сверху</p></div><span class="was"></span><span class="price">157 600 ₽</span></div>
     <div class="ex-row"><div><p class="who">Пришла с мужем, оба на Про</p><p class="how">Первая по своей цене, второй участник — половина цены сайта</p></div><span class="was"></span><span class="price">≈ 115 000 ₽</span></div>
   </div>
@@ -317,7 +320,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
         <li><b>Бронь 5 000 ₽</b> или заявка на рассрочку в первые 72 часа сохраняют цену окна, место и подарки.</li>
         <li><b>Рассрочка</b> на 3, 6, 12 или 18 месяцев, первый платёж через месяц.</li>
         <li><b>Предобучение</b> — первый модуль. Подарок за решение в первые 72 часа, открывается сразу после оплаты или предоплаты.</li>
-        <li><b>«Формула любви»</b>: подарки ступеней Восьмой клетки определим к запуску «Формулы».</li>
+        <li><b>«Формула любви»</b>: подарки тарифов те же, что в «Перепрошивке» (решение 08.11).</li>
       </ul>
     </div>
   </div>
@@ -326,16 +329,17 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
 <section class="band" aria-labelledby="s6">
   <div class="wrap stack" style="padding-block:40px">
     <p class="eyebrow">Пока не определено</p>
-    <h2 id="s6" style="color:var(--band-fg)">Один вопрос открыт</h2>
+    <h2 id="s6" style="color:var(--band-fg)">Два вопроса открыты</h2>
     <div class="decide">
       <div class="dq"><h3>Как считать «первых 20» для браслета?</h3><div class="ans"><span>На поток</span><span>На живой запуск</span><span>На каждую группу автовебинара</span></div></div>
+      <div class="dq"><h3>Где наставник видит ключи человека из всех интенсивов?</h3><div class="ans"><span>Карточка amoCRM</span><span>Бот</span><span>Другое</span></div></div>
     </div>
     <p class="lead">Всё остальное на этой странице действует. Процент наставника считаем от фактически оплаченной цены.</p>
   </div>
 </section>
 </main>
 
-<footer class="wrap">Обновлено 05.11.2026. Цены и окна — с 29.10, подарки — с 05.11. Все суммы в рублях.</footer>
+<footer class="wrap">Обновлено 10.11.2026. Цены и окна — с 29.10, подарки — с 05.11, монеты и второй участник — с 10.11. Все суммы в рублях.</footer>
 
 <script>
 (function(){
@@ -365,13 +369,14 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
     else if(d==="m50"){label="Скидка 50%, согласовала Лена"; total=Math.round(base*0.5); free=true; msg="Исключительный случай, только с согласия Лены.";}
     else if(d==="m5"||d==="m10"||d==="m15"){var pc=+d.slice(1); label="Скидка наставника, "+pc+"%"; total=Math.round(base*(1-pc/100)); msg=(pc===5?"Наставник даёт сам":"Только с согласия РОПа")+", причина — в amoCRM.";}
     if(!free&&d!=="none"&&total<g){warn=true; msg="Ниже нижней границы: цена выпускницы на этом тарифе — "+fmt(g)+". Так не продаём.";}
-    var coins=st.w<2?k*200:0;
+    var coins=st.w<2?Math.min(k*200,5000):0;
+    if(st.w<2&&k*200>5000) msg=(msg?msg+" ":"")+"Потолок монет — 5 000 ₽ на одну покупку.";
     if(st.w===2&&k>0) msg=(msg?msg+" ":"")+"Монеты действуют первые 7 дней, по цене сайта — нет.";
     if(!msg&&d==="none") msg="Монеты складываются с любой скидкой.";
     document.getElementById("rBase").textContent=fmt(base)+" · "+W[st.w].toLowerCase();
     document.getElementById("rDiscLabel").textContent=d==="none"?"Скидка":label;
     document.getElementById("rDisc").textContent=base-total>0?"− "+fmt(base-total):"—";
-    document.getElementById("rCoinsLabel").textContent="Монеты, "+k+" × 200 ₽";
+    document.getElementById("rCoinsLabel").textContent="Монеты, "+k+" × 200 ₽"+(k*200>5000?", потолок 5 000 ₽":"");
     document.getElementById("rCoins").textContent=coins>0?"− "+fmt(coins):"—";
     document.getElementById("rTotal").textContent=fmt(total-coins);
     var m=document.getElementById("rMsg"); m.textContent=msg; m.className="msg"+(warn?" warn":"");
